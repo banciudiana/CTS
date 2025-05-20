@@ -1,0 +1,18 @@
+Avem două sisteme informatice:
+
+Universitatea A, care are o interfață INotaFinala cu metoda:
+
+double calculeazaNotaFinala(Student student);
+Institutul B (recent achiziționat de Universitatea A), care folosește propria interfață:
+
+
+double evalueazaStudent(Student student);
+Clasa Student conține:
+String nume
+double punctajExamene
+double punctajProiecte
+
+Scop:
+Universitatea A vrea ca toate institutele achiziționate (inclusiv Institutul B) să folosească interfața sa INotaFinala, fără să modifice codul clientului deja existent în Institutul B.
+
+Prin urmare, trebuie să implementezi un Adapter care adaptează interfața INotaFinala la IEvaluareInstitutB.

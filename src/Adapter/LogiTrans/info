@@ -1,0 +1,27 @@
+Context general
+Compania LogiTrans, specializată în livrări naționale și internaționale, utilizează un sistem propriu pentru planificarea rutelor de transport. Acest sistem are o interfață standard pentru calculul rutelor pe baza informațiilor clientului.
+
+Recent, LogiTrans a achiziționat compania GlobalShip, care operează pe piețe internaționale și are propriul sistem informatic, incompatibil ca structură și logică de apeluri.
+
+Pentru a păstra compatibilitatea în platforma LogiTrans, dar și pentru a reutiliza tehnologia GlobalShip fără a-i modifica implementarea, se dorește implementarea unui design pattern Adapter.
+
+Cerință
+Se cere să realizezi un Adapter care permite folosirea sistemului GlobalShip în cadrul platformei LogiTrans, fără a modifica aplicațiile existente care deja folosesc interfața LogiTrans.
+
+Mai exact:
+
+LogiTrans are o interfață care planifică o rută pe baza unui client ce conține adresa de destinație, tipul livrării și greutatea coletului. Această interfață returnează o rută standardizată (distanță, durată estimată, cost).
+
+GlobalShip are o interfață proprie care funcționează diferit:
+
+primește ca parametri o adresă, un indicator boolean pentru livrare rapidă și greutatea coletului.
+
+returnează un obiect propriu cu informațiile despre rută (nume diferite, structură diferită).
+
+Sistemul LogiTrans trebuie să folosească sistemul GlobalShip prin intermediul unui Adapter, fără ca nici clientul LogiTrans și nici sistemul GlobalShip să fie modificate.
+
+Vei implementa un Adapter care:
+
+convertește cererea de rută din formatul LogiTrans în formatul GlobalShip,
+
+primește rezultatul din sistemul GlobalShip și îl transformă în formatul folosit de LogiTrans.
