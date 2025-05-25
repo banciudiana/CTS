@@ -21,7 +21,6 @@ public class Main {
         IPetrecere petrecere = new Petrecere("24.12.2022", listaInvitati);
         petrecere.aduagaParticipanti(cl1);
 
-        //aici vin restrictii
         IPetrecere petrecereProxy = new ProxyPetrecere(petrecere);
         petrecereProxy.aduagaParticipanti(cl3);
         petrecereProxy.aduagaParticipanti(cl4);
